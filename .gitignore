@@ -25,6 +25,6 @@ testem.log
 /e2e/*.map
 log.txt
 
-app/*.js
-app/*.map
+app/**/*.js
+app/**/*.map
 
