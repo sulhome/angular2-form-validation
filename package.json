@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "serve": "./node_modules/.bin/live-server --host=localhost --port=5001 --entry-file=index.html .",
-    "tsc-dev": "./node_modules/.bin/tsc --watch",
-    "clean-dist": "rm -rf dist/*"
+    "tsc-dev": "./node_modules/.bin/tsc --watch"
   },
   "keywords": [],
   "author": "",

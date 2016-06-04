@@ -31,13 +31,15 @@ import {Logger} from "../services/logger";
     <div class="tags-container">
       <a class="ui orange label" *ngFor="#tag of tags">{{tag}}<i (click)="removeTag(tag)" class="delete icon"></i></a>
     </div>
-    <input type="text" placeholder="tags" [ngFormControl]="tagsControl" (keyup)="onKey($event)" />
-    <div class="ui error small message" [class.visible]="tagsControl.hasError('tagsInvalid') && tagsControl.touched">Tags is required</div>
+    <input type="text" placeholder="tags" [ngFormControl]="tagsControl" (keyup)="onKey($event)" />    
+    <validation-message [validationControl]="tagsControl" [validationName]="'tagsInvalid'" 
+    [errorMessage]="'Tags is required'"></validation-message> 
   </div>   
   <div class="field" [class.error]="!blogTextControl.valid && blogTextControl.touched">
     <label>Blog Text</label>    
-    <textarea [ngFormControl]="blogTextControl"></textarea> 
-    <div class="ui error small message" [class.visible]="blogTextControl.hasError('required') && blogTextControl.touched">Blog text is required</div>
+    <textarea [ngFormControl]="blogTextControl"></textarea>    
+    <validation-message [validationControl]="blogTextControl" [validationName]="'required'" 
+    [errorMessage]="'Blog text is required'"></validation-message> 
   </div>   
   <div class="field">  
   <markdown-preview [markdownInput]="blogTextControl.value"></markdown-preview>   

@@ -6,7 +6,7 @@ import {Control} from "angular2/common";
     host: {
         class: ''
     },
-    template: `<div class="ui error small message" [class.visible]="validationControl.hasError(validationName) && validationControl.touched">{{errorMessage}}</div>`
+    template: `<div class="ui error small message error-message-container" [class.visible]="validationControl.hasError(validationName) && validationControl.touched">{{errorMessage}}</div>`
 })
 export class ValidationMessage {
     @Input() validationControl:Control
