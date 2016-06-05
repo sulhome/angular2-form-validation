@@ -25,6 +25,3 @@ export class DashboardComponent {
         this.blogs = this.datastore.getBlogs();
     }
 }
-
-
-

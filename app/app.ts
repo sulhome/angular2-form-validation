@@ -5,7 +5,7 @@ import {ROUTER_PROVIDERS} from 'angular2/router';
 import {Datastore} from './services/datastore';
 import {Logger} from './services/logger'
 
-import {AppComponent} from './app.componenet'
+import {AppComponent} from './app.component'
 
 bootstrap(AppComponent, [ROUTER_PROVIDERS, Datastore, Logger])
     .then(success => console.log(`Bootstrap success`))

@@ -1,6 +1,5 @@
 import {Component} from 'angular2/core';
 import {RouteConfig, ROUTER_DIRECTIVES, Router} from 'angular2/router';
-
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {CreateBlogComponent} from './blogs/createBlog.component'
 
