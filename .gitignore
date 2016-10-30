@@ -28,3 +28,5 @@ log.txt
 app/**/*.js
 app/**/*.map
 
+yarn.lock
+dist

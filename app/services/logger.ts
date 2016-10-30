@@ -1,20 +1,13 @@
-import * as HumaneLogger from 'humane';
-import {Injectable} from "angular2/core";
+import * as humane from 'humane';
+import {Injectable} from "@angular/core";
 
 @Injectable()
 export class Logger {
-    // This is a hack to prevent tsc error
-    private humaneLogger:any;
-
-    constructor() {
-        this.humaneLogger = HumaneLogger;
-    }
-
     error(message):void {
-        this.humaneLogger.default.log(message, {addnCls: 'humane-libnotify-error'});
+        humane.default.log(message, {addnCls: 'humane-libnotify-error'});
     }
 
     info(message):void {
-        this.humaneLogger.default.log(message, {addnCls: 'humane-libnotify-info'});
+        humane.default.log(message, {addnCls: 'humane-libnotify-info'});
     }
 }

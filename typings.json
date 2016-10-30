@@ -1,7 +1,0 @@
-{
-  "ambientDependencies": {
-    "humane": "registry:dt/humane#3.0.0+20160316155526",
-    "marked": "registry:dt/marked#0.0.0+20160325085301",
-    "underscore": "registry:dt/underscore#1.7.0+20160316155526"
-  }
-}

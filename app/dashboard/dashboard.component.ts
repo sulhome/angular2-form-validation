@@ -1,4 +1,4 @@
-import { Component } from 'angular2/core';
+import { Component } from '@angular/core';
 import {Datastore} from './../services/datastore'
 import {Blog} from './../blogs/blog'
 
@@ -11,7 +11,7 @@ import {Blog} from './../blogs/blog'
             <th>Title</th>
             <th>Tags</th>            
         </tr>
-        <tr *ngFor="#blog of blogs">
+        <tr *ngFor="let blog of blogs">
             <td>{{blog.title}}</td>
             <td>{{blog.tags}}</td>
         </tr>
