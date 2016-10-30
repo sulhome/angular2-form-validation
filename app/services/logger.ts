@@ -1,13 +1,13 @@
-import * as humane from 'humane';
+import * as humane from 'humane-js';
 import {Injectable} from "@angular/core";
 
 @Injectable()
 export class Logger {
     error(message):void {
-        humane.default.log(message, {addnCls: 'humane-libnotify-error'});
+        humane.log(message, {addnCls: 'humane-libnotify-error'});
     }
 
     info(message):void {
-        humane.default.log(message, {addnCls: 'humane-libnotify-info'});
+        humane.log(message, {addnCls: 'humane-libnotify-info'});
     }
 }

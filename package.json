@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "./node_modules/.bin/live-server --host=localhost --port=5001 --entry-file=index.systemjs.html .",
+    "serve": "./node_modules/.bin/live-server --host=localhost --port=5002 --entry-file=index.html .",
+    "build": "tsc || true && ./node_modules/.bin/webpack",
     "tsc-dev": "./node_modules/.bin/tsc --watch"
   },
   "keywords": [],
@@ -19,7 +20,6 @@
     "@angular/platform-browser-dynamic": "^2.1.2",
     "@angular/router": "^3.1.2",
     "@types/core-js": "^0.9.34",
-    "@types/humane": "^3.0.28",
     "@types/marked": "0.0.28",
     "@types/underscore": "^1.7.33",
     "core-js": "^2.4.1",
@@ -27,12 +27,13 @@
     "marked": "^0.3.6",
     "reflect-metadata": "^0.1.8",
     "rxjs": "^5.0.0-rc.1",
-    "systemjs": "^0.19.40",
     "underscore": "^1.8.3",
     "zone.js": "^0.6.26"
   },
   "devDependencies": {
     "live-server": "^1.1.0",
-    "typescript": "^2.0.6"
+    "typescript": "^2.0.6",
+    "ts-loader": "^0.9.5",
+    "webpack": "^1.13.3"
   }
 }
