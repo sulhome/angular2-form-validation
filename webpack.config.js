@@ -1,4 +1,6 @@
 var webpack = require("webpack");
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var path = require('path');
 
 module.exports = {
   entry: {
@@ -6,13 +8,18 @@ module.exports = {
     "app": "./app/app"
   },
   output: {
-    path: __dirname,
-    filename: "./dist/[name].bundle.js"
+    path: path.resolve(__dirname, "dist"),
+    filename: "[name].bundle.js"
   },
   resolve: {
     extensions: ['', '.ts', '.js']
   },
   devtool: 'source-map',
+  devServer: {
+    colors: true,
+    historyApiFallback: true,
+    inline: true
+  },
   module: {
     loaders: [
       {
@@ -23,6 +30,11 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"./dist/vendor.bundle.js")
+    new webpack.optimize.CommonsChunkPlugin("vendor", "vendor.bundle.js"),
+    new HtmlWebpackPlugin({
+      path: path.resolve(__dirname, "dist"),
+      filename: 'index.html',
+      template: 'template.html'
+    })
   ]
 }

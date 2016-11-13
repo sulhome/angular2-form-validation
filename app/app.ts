@@ -7,8 +7,8 @@ import { BrowserModule } from "@angular/platform-browser";
 import { AppComponent } from './app.component'
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CreateBlogComponent } from './blogs/createBlog.component'
-import { ValidationMessage } from './directives/validationMessage';
-import { MarkdownPreview } from './directives/markdownPreview';
+import { ValidationMessage } from './shared/validationMessage';
+import { MarkdownPreview } from './shared/markdownPreview';
 
 import { Datastore } from './services/datastore';
 import { Logger } from './services/logger'

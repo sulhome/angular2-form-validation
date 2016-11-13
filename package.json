@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "./node_modules/.bin/live-server --host=localhost --port=5002 --entry-file=index.html .",
-    "build": "tsc || true && ./node_modules/.bin/webpack",
-    "tsc-dev": "./node_modules/.bin/tsc --watch"
+    "serve": "./node_modules/.bin/webpack-dev-server",
+    "build": "tsc && ./node_modules/.bin/webpack --progress"
   },
   "keywords": [],
   "author": "",
@@ -31,9 +30,11 @@
     "zone.js": "^0.6.26"
   },
   "devDependencies": {
+    "html-webpack-plugin": "^2.24.1",
     "live-server": "^1.1.0",
-    "typescript": "^2.0.6",
     "ts-loader": "^0.9.5",
-    "webpack": "^1.13.3"
+    "typescript": "^2.0.6",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
   }
 }

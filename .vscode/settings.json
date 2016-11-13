@@ -6,6 +6,9 @@
         "**/.hg": true,
         "**/.DS_Store": true,
         "app/**/*.js": true,
-        "app/**/*.js.map": true
+        "app/**/*.js.map": true,
+        ".idea": true,
+        ".vscode":true,
+        "yarn.lock":true
     }
 }
